@@ -1,7 +1,6 @@
 import Movie from "./movie";
 
 
-
 export default async function Home() {
   const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
   const res = await data.json()
@@ -14,8 +13,7 @@ export default async function Home() {
         id={data.id}
         title={data.title}
         release_date={data.release_date}
-        poster_path={data.poster_path}
-        />
+        poster_path={data.poster_path} />
       )} </div>
     </main>
   )

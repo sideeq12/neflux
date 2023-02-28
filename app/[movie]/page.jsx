@@ -1,6 +1,16 @@
 import Image from "next/image";
 
+
+export async function generatestaticParams(){
+    const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
+    const res = await data.json();
+    return res.results.map(movie => ({
+        movie : toString(movie.id)
+    }))
+}   
+
 export default async function MovieData({params}){
+    
 
     const data = await fetch(`https://api.themoviedb.org/3/movie/${params.movie}?api_key=${process.env.API_KEY}`);
     const movie_path = "https://image.tmdb.org/t/p/original"

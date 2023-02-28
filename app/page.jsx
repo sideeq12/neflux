@@ -1,13 +1,10 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main>
-      <h2>Hello world</h2>
+      <h2 className='text-lg py-6'>Hello world</h2>
+      <div>We are texting theb layout </div>
     </main>
   )
 }

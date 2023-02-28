@@ -1,15 +1,21 @@
-
-"https://api.themoviedb.org/3/movie/popular"
+import Movie from "./movie";
 
 
 export default async function Home() {
   const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
   const res = await data.json()
-  console.log(res)
     return (
     <main>
       <h2 className='text-lg py-6'>Hello world</h2>
-      <div>We are texting theb layout </div>
+      <div className="grid gap-16 grid-cols-fluid"> {res.results.map(
+        data => <Movie 
+        key={data.id}
+        id={data.id}
+        title={data.title}
+        release_date={data.release_date}
+        poster_path={data.poster_path}
+        />
+      )} </div>
     </main>
   )
 }

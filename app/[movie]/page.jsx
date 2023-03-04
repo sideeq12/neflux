@@ -15,7 +15,6 @@ export default async function MovieData({params}){
     const data = await fetch(`https://api.themoviedb.org/3/movie/${params.movie}?api_key=${process.env.API_KEY}`);
     const movie_path = "https://image.tmdb.org/t/p/original"
     const res = await data.json();
-    console.log(res)
     return (
         <div>
             <h2 className="text-2xl">{res.title}</h2>

@@ -6,7 +6,7 @@ export default async function Home() {
   const res = await data.json()
     return (
     <main>
-      <h2 className='text-lg py-6'>Hello world</h2>
+      <h2 className='text-lg py-6 font-mono font-extrabold lg:text-2xl'>Fleevid</h2>
       <div className="grid gap-16 grid-cols-fluid"> {res.results.map(
         data => <Movie 
         key={data.id}

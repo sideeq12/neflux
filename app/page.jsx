@@ -7,9 +7,9 @@ export default async function Home() {
   console.log( res)
     return (
     <main>
-      <h2 className='text-lg py-6 font-mono font-extrabold lg:text-2xl'>Flee <span className="text-sky-400 
+      <h2 className='text-lg py-6 font-mono font-extrabold lg:text-2xl ml-8'>Flee <span className="text-sky-400 
       	text-decoration-line: overline decoration-pink-900">Video</span></h2>
-      <div className="grid gap-16 grid-cols-fluid"> {res.results.map(
+      <div className="grid gap-16 sm:grid-cols-fluid"> {res.results.map(
         data => <Movie 
         key={data.id}
         id={data.id}

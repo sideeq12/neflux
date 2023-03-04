@@ -16,7 +16,7 @@ export default async function MovieData({params}){
     const movie_path = "https://image.tmdb.org/t/p/original"
     const res = await data.json();
     return (
-        <div>
+        <div className="mx-8 my-8">
             <h2 className="text-2xl">{res.title}</h2>
             <h2 className="text-lg">{res.release_date}</h2>
             <h2 className="text-lg"> Runtime : {res.runtime} minutes</h2>

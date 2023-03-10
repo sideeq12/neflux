@@ -16,6 +16,7 @@ export default function Movie({title, id, release_date, poster_path}){
                 height={400}
                  alt="The movie image here " />
             </Link>
+            
         </div>
 
     )

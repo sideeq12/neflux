@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 
+// movie component
 export default function Movie({title, id, release_date, poster_path}){
     const movie_path = "https://image.tmdb.org/t/p/original"
     return(

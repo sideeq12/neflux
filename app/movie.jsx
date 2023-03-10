@@ -14,9 +14,9 @@ export default function Movie({title, id, release_date, poster_path}){
                 <Image src={movie_path+poster_path }
                 width={400}
                 height={400}
-                 alt="The movie image" />
+                 alt="The movie image here" />
             </Link>
         </div>
-        
+
     )
 }

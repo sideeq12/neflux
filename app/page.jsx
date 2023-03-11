@@ -1,6 +1,6 @@
 import Movie from "./movie";
 
-// main function
+// main function at the layer
 export default async function Home() {
   const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`);
   const res = await data.json()
